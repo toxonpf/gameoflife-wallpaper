@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "%{EMAIL}",
+                "Name": "%{AUTHOR}"
+            }
+        ],
+        "Id": "org.kde.plasma.gameoflife",
+        "License": "LGPLv2+",
+        "Name": "Conway's Game of Life",
+        "Version": "2.0.0",
+        "Description": "Configurable Conway's Game of Life with spawning and animations"
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-ContainmentType": "Desktop"
+
+}

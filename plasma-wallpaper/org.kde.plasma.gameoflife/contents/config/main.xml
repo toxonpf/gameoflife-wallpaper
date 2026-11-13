@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <entry name="color" type="String"><default>#00ff66</default></entry>
+    <entry name="backgroundColor" type="String"><default>#000000</default></entry>
+    <entry name="effectColor" type="String"><default>#ffffff</default></entry>
+    <entry name="generationInterval" type="Int"><default>250</default></entry>
+    <entry name="cellSize" type="Int"><default>10</default></entry>
+    <entry name="cellShape" type="Int"><default>0</default></entry>
+    <entry name="cellGap" type="Int"><default>0</default></entry>
+    <entry name="cornerRadius" type="Int"><default>35</default></entry>
+    <entry name="smoothCells" type="Bool"><default>true</default></entry>
+    <entry name="cellTransitionDuration" type="Int"><default>350</default></entry>
+    <entry name="fluidStrength" type="Int"><default>65</default></entry>
+    <entry name="fluidSpeed" type="Int"><default>45</default></entry>
+    <entry name="initialDensity" type="Int"><default>10</default></entry>
+    <entry name="paused" type="Bool"><default>false</default></entry>
+    <entry name="connectedCanvas" type="Bool"><default>true</default></entry>
+    <entry name="autoSpawn" type="Bool"><default>true</default></entry>
+    <entry name="randomSpawnInterval" type="Bool"><default>true</default></entry>
+    <entry name="spawnInterval" type="Int"><default>3000</default></entry>
+    <entry name="spawnIntervalMin" type="Int"><default>1000</default></entry>
+    <entry name="spawnIntervalMax" type="Int"><default>5000</default></entry>
+    <entry name="spawnCount" type="Int"><default>1</default></entry>
+    <entry name="spawnSingles" type="Bool"><default>true</default></entry>
+    <entry name="spawnClouds" type="Bool"><default>true</default></entry>
+    <entry name="spawnGliders" type="Bool"><default>true</default></entry>
+    <entry name="spawnShips" type="Bool"><default>true</default></entry>
+    <entry name="spawnOscillators" type="Bool"><default>true</default></entry>
+    <entry name="cloudSize" type="Int"><default>12</default></entry>
+    <entry name="cloudDensity" type="Int"><default>45</default></entry>
+    <entry name="animationType" type="Int"><default>1</default></entry>
+    <entry name="animationDuration" type="Int"><default>500</default></entry>
+    <entry name="animationIntensity" type="Int"><default>70</default></entry>
+    <entry name="animationFps" type="Int"><default>30</default></entry>
+    <entry name="deathAnimationType" type="Int"><default>7</default></entry>
+    <entry name="deathAnimationDuration" type="Int"><default>650</default></entry>
+    <entry name="deathAnimationIntensity" type="Int"><default>75</default></entry>
+    <entry name="deathEffectColor" type="String"><default>#66ccff</default></entry>
+    <entry name="mousePattern" type="Int"><default>0</default></entry>
+    <entry name="resetSerial" type="Int"><default>0</default></entry>
+    <entry name="clearSerial" type="Int"><default>0</default></entry>
+  </group>
+</kcfg>

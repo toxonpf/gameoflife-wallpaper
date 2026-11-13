@@ -1,0 +1,5 @@
+*.qmlc
+*.jsc
+build/
+dist/
+.cache/
