@@ -61,3 +61,69 @@ sed '/^\.pragma library$/d' \
 ## Лицензия
 
 Исходный шаблон Plasma wallpaper содержит лицензию LGPLv2+. Изменения проекта распространяются на тех же условиях, если это требуется лицензией исходных файлов.
+
+---
+
+# Conway's Game of Life — configurable KDE Plasma wallpaper
+
+Configurable Conway's Game of Life live wallpaper for KDE Plasma 6. The simulation supports a continuous canvas across multiple monitors, random pattern spawning, mouse interaction, fluid cells, and independent birth and death effects.
+
+## Features
+
+- configurable generation speed, cell size, initial density, and colors;
+- one continuous simulation canvas across multiple monitors;
+- mixed spawning of single cells, clouds, gliders, spaceships, and oscillators;
+- fixed or random spawning intervals;
+- square, rounded square, circle, and fluid blob cell shapes;
+- fluid mode with droplets, bridges, deformation, and smooth growth/disappearance;
+- independent birth and death animations: fade, flash, pulse, wave, pop, ripple, sparks, and dissolve;
+- left-click drawing and right-click erasing on empty desktop space;
+- random fill, clear field, and restore-default buttons;
+- settings saved through the standard Plasma wallpaper configuration dialog.
+
+## Requirements
+
+- KDE Plasma 6;
+- Qt 6 on Wayland or X11;
+- `kpackagetool6`.
+
+## Installation
+
+From the project root, run:
+
+```bash
+./install.sh
+```
+
+The script installs the wallpaper package into `~/.local/share/plasma/wallpapers/` and the user-local desktop containment override into `~/.local/share/plasma/plasmoids/`. It then restarts `plasma-plasmashell.service` when available so Plasma loads the changes.
+
+Open the desktop wallpaper settings and select `Conway's Game of Life`. To use one canvas across monitors, enable `Combine all monitors into one continuous field` and, if needed, `Use on all screens`.
+
+## Project structure
+
+```text
+plasma-wallpaper/org.kde.plasma.gameoflife/  wallpaper package
+  contents/config/main.xml                  persisted settings
+  contents/ui/config.qml                     configuration UI
+  contents/ui/main.qml                       QML renderer and timers
+  contents/ui/code/life.js                   simulation and Canvas renderer
+plasmoid/org.kde.desktopcontainment/         forwards clicks on empty desktop space
+install.sh                                   local installation script
+```
+
+## Validation
+
+```bash
+/usr/lib/qt6/bin/qmllint -I /usr/lib/qt6/qml \
+  plasma-wallpaper/org.kde.plasma.gameoflife/contents/ui/main.qml \
+  plasma-wallpaper/org.kde.plasma.gameoflife/contents/ui/config.qml
+
+sed '/^\.pragma library$/d' \
+  plasma-wallpaper/org.kde.plasma.gameoflife/contents/ui/code/life.js | node --check
+```
+
+`qmllint` may report warnings about unresolved desktop-containment types. These types are provided by the KDE runtime and are not syntax errors in this project.
+
+## License
+
+The original Plasma wallpaper template is licensed under LGPLv2+. Project changes remain under the applicable license terms of the original files.
